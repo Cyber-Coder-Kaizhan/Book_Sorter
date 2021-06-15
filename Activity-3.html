@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>
+Book Sorter
+</title>
+<script src="Activity-3.js"></script>
+</head>
+<body>
+<center>
+<h1>
+Book Sorter
+</h1>
+<input type="text" placeholder="Book No.1" id="txt1">
+<br>
+<input type="text" placeholder="Book No.2" id="txt2">
+<br>
+<input type="text" placeholder="Book No.3" id="txt3">
+<br>
+<input type="text" placeholder="Book No.4" id="txt4">
+<br>
+<button type="button" id="btn1" onclick="submit()">Submit</button>
+<br><br>
+<button type="button" id="btn2" onclick="sorting()">Sort</button>
+<br><br>
+<button type="button" id="btn3" onclick="reverse()">Reverse</button>
+<h3 id="ans"></h3>
+<script>
+var Book=[];
+function submit(){
+var bk1=document.getElementById("txt1").value;
+var bk2=document.getElementById("txt2").value;
+var bk3=document.getElementById("txt3").value;
+var bk4=document.getElementById("txt4").value;
+Book.push(bk1);
+Book.push(bk2);
+Book.push(bk3);
+Book.push(bk4);
+document.getElementById("ans").innerHTML=Book;
+}
+function sorting(){
+Book.sort();
+document.getElementById("ans").innerHTML=Book;
+}
+function reverse(){
+Book.reverse();
+document.getElementById("ans").innerHTML=Book;
+}
+</script>
+</center>
+</body>
+</html>
